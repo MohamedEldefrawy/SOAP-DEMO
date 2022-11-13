@@ -22,4 +22,10 @@ public class CountryUnitTest {
         List<TCountryCodeAndName> countries = this.countryInfoServiceSoapType.listOfCountryNamesByCode().getTCountryCodeAndName();
         Assertions.assertTrue(countries.size() > 0);
     }
+
+    @Test
+    public void testCapitalCity() {
+        var country = this.countryInfoServiceSoapType.capitalCity("EG");
+        Assertions.assertEquals("Cairo", country);
+    }
 }
