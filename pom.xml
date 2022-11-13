@@ -37,13 +37,12 @@
     </dependencies>
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.9.0</version>
                 <configuration>
-                    <release>11</release>
+                    <release>17</release>
                 </configuration>
             </plugin>
 
@@ -60,6 +59,10 @@
                 </executions>
                 <configuration>
                     <wsdlDirectory>${project.basedir}/src/main/resources/</wsdlDirectory>
+                    <wsdlFiles>
+                        <wsdlFile>CountryInfoService.wsdl</wsdlFile>
+                        <wsdlFile>TextCasingService.wsdl</wsdlFile>
+                    </wsdlFiles>
                     <packageName>org.example</packageName>
                     <extension>true</extension>
                 </configuration>
